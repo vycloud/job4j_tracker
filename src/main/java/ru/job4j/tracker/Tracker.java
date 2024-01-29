@@ -18,12 +18,11 @@ public class Tracker {
     }
 
     public Item[] findByName(String key) {
-        Item[] temp = Arrays.copyOf(items, size);
         Item[] result = new Item[size];
         int count = 0;
         for (int index = 0; index < size; index++) {
-            if (key.equals(temp[index].getName())) {
-                result[index] = temp[index];
+            if (key.equals(items[index].getName())) {
+                result[count] = items[index];
                 count++;
             }
         }
